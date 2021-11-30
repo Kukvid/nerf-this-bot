@@ -40,7 +40,7 @@ def set_updaters(dispatcher):
 
 def main():
     create_log()
-    updater = Updater(token="780079984:AAFIhcpr_2Av6s2UROl61wsrtEMlvrM_SRc")
+    updater = Updater(token="")
     dispatcher = updater.dispatcher
     set_updaters(dispatcher)
     updater.start_polling()
@@ -81,7 +81,7 @@ def weather2(update, context):
     txt = update.message
     lat = txt.location.latitude
     lon = txt.location.longitude
-    api_key = "51da59c2ccbfe6d8cc883f5a686593ed"
+    api_key = ""
     request = requests.get(
         f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric&lang=ru")
     response = request.json()
@@ -167,4 +167,6 @@ def date(update, context):
 
 
 if __name__ == '__main__':
+    main()
+== '__main__':
     main()
